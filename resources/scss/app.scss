@@ -1,0 +1,247 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 20px 0;
+    height: 100px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 35px 0;
+
+        li a{
+            color: rgb(125, 125, 125);
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0 20px;
+            font-size: 13px;
+            font-weight: 700;
+
+            &.active,
+            &:hover {
+                cursor: pointer;
+                color: #0382F9;
+                border-bottom: 5px solid;
+                width: 50%;
+                padding: 60px 20px;
+                border-bottom-color: #0382F9;
+            }
+        }
+
+    }
+
+}
+
+main {
+    background-color: #1C1C1C;
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    object-fit: cover;
+    .jumbotron-image {
+        width: 100%;
+        height: auto;
+    }
+}
+.jumbotron-heading{
+    font-weight: 700;
+    position: absolute;
+    bottom: 425px;
+    left: 19%;
+    color: white;
+    text-transform: uppercase;
+    background-color: #0382F9;
+    padding: 10px 15px;
+}
+
+.cont-comics {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.boxes {
+    cursor: pointer;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .comics-card {
+        width: 200px;
+        margin: 15px 0;
+        padding: 0 10px;
+        overflow: hidden;
+
+        .img-card {
+        width: 200px;
+        height: 200px;
+        }
+
+        .text-comics {
+            padding-top: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 0%;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+
+    }
+}
+
+
+button {
+
+        font-weight: 600;
+        margin: 30px 0;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 8px 40px;
+        color: #fff;
+        background-color: #0382F9;
+        border: 1px solid #0382F9;
+        transition: all 0.5s ease;
+
+    &:hover {
+        color: #0382F9;
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+.content {
+    height: 120px;
+    background-color: #0382F9;
+    .text-section {
+        cursor: pointer;
+        padding: 20px 10px;
+        font-size: 12px;
+
+    }
+    img.icons {
+        cursor: pointer;
+        margin: 0 10px;
+        height: 52px;
+    }
+    img.icons_visa{
+        width: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}
+
+
+footer {
+    height: 420px;
+    background-image: url(../images/footer-bg.jpg);
+    background-size: cover;
+}
+
+.col-6.d-flex.flex-wrap {
+    padding-top: 20px;
+
+    li {
+        font-size: 10px;
+
+        a{
+            color: grey;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    }
+
+    .logo-footer {
+        width: 55%;
+    }
+
+    .background-section {
+        background-color: #303030;
+    }
+
+    .margin-btn {
+        padding: 0 290px;
+
+        button {
+            padding: 10px;
+            color: #fff;
+            background-color: transparent;
+            border: 3px solid #0382F9;
+            transition: all 0.650s ease;
+
+            &:hover{
+                background-color: #0382F9;
+            }
+        }
+    }
+
+    span {
+        padding-top: 5px;
+        color: #0382F9;
+        font-weight: 700;
+    }
+
+    .comic-card{
+        position: absolute;
+        top: 320px;
+        left: 280px;
+        width: 200px;
+        margin: 15px 0;
+        padding: 0 10px;
+        overflow: hidden;
+
+        .card {
+        width: 180px;
+        height: 250px;
+        }
+    }
+
+    .line-blue {
+        background-color: #0382F9;
+        height: 60px;
+    }
+
+    .contents {
+        background-color: #fff;
+        height: 400px;
+    }
+
+    .availability {
+        background-color: #55BA59;
+
+        .text-green {
+            color: #ADEF7D;
+        }
+    }
+
+    .adv {
+        cursor: pointer;
+        width: 300px;
+    }
+
+    .txt-adv {
+        width: 415px;
+    }
