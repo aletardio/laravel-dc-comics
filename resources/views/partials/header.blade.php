@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <a href="">
+                <a href="{{ route('homepage') }}">
                     <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="Dc">
                 </a>
             </div>
@@ -12,8 +12,8 @@
                         <a href="#">Characters</a>
                     </li>
                     <li>
-                        <a class="{{ Route::currentRouteName() === 'detail-comic' ? 'active' : '' }}"
-                            href="">Comics</a>
+                        <a class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}"
+                            href="{{ route('comics.index') }}">Comics</a>
                     </li>
                     <li>
                         <a href="#">Movies</a>
