@@ -100,7 +100,37 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'title' => 'required|max:50|min:3',
+            'thumb' => 'max:255',
+            'price' => 'required|max:10',
+            'series' => 'required|max:50|min:3',
+            'sale_date' => 'required|max:10|min:8',
+            'type' => 'required|max:20',
+            'artists' => 'required',
+            'writers' => 'required',
+            'description' => 'required',
+        ]);
+
+        $form_data = $request->all();
+
+        $comic = Comic::find($id);
+
+
+        $comic->title = $form_data['title'];
+        $comic->thumb = $form_data['thumb'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->sale_date = $form_data['sale_date'];
+        $comic->type = $form_data['type'];
+        $comic->artists = $form_data['artists'];
+        $comic->writers = $form_data['writers'];
+        $comic->description = $form_data['description'];
+
+        $comic->update();
+
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
