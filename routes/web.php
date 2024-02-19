@@ -20,5 +20,3 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::resource('comics', ComicController::class);
-
-Route::get('comics/show_test/{id}', [ComicController::class, 'show_test']);

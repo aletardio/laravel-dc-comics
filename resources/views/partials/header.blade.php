@@ -12,7 +12,7 @@
                         <a href="#">Characters</a>
                     </li>
                     <li>
-                        <a class="{{ Route::currentRouteName() === 'comics.index' ? 'active' : '' }}"
+                        <a class="{{ Route::currentRouteName() === 'comics.index' || Route::currentRouteName() === 'comics.show' ? 'active' : '' }}"
                             href="{{ route('comics.index') }}">Comics</a>
                     </li>
                     <li>
