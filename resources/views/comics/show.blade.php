@@ -40,6 +40,12 @@
                     <div class="py-2 lh-base">
                         {{ $comic['description'] }}
                     </div>
+                    <button class="btn-edit">
+                        <i class="fa-solid fa-pencil"></i>
+                        <a class="link-offset-2 link-underline link-underline-opacity-0"
+                            href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit
+                            Comic</a>
+                    </button>
                 </div>
                 <div class="col-5 py-4 d-flex flex-column justify-content-center">
                     <div class="text-uppercase text-end fw-bold txt-adv">
