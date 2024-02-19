@@ -22,7 +22,8 @@
     </div>
     <div class="d-flex justify-content-center">
         <button>
-            Load More
+            <a class="link-offset-2 link-underline link-underline-opacity-0" href="{{ route('comics.create') }}">Add
+                Comic</a>
         </button>
     </div>
 @endsection
