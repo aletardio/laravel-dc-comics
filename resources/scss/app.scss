@@ -320,7 +320,7 @@ footer {
         }
     }
 
-    .btn-closed {
+    .btn-to-close {
         font-weight: 600;
         margin: 30px 0;
         font-size: 15px;
@@ -342,5 +342,26 @@ footer {
         color: #6C757D;
         background-color: #fff;
         border: 1px solid #6C757D;
+        }
+    }
+
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: var(--bs-modal-color);
+        pointer-events: auto;
+        background-color: var(--bs-modal-bg);
+        background-clip: padding-box;
+        border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+        border-radius: var(--bs-modal-border-radius);
+        outline: 0;
+        top: 200px;
+
+        span#modal-item-title {
+            padding-top: 5px;
+            color: black;
+            font-weight: 700;
         }
     }

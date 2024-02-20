@@ -9,7 +9,7 @@
                 <p>Confermi di voler eliminare <span id="modal-item-title"></span>?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-closed me-2" data-bs-dismiss="modal">Chiudi</button>
+                <button type="button" class="btn-to-close me-2" data-bs-dismiss="modal">Chiudi</button>
                 <button type="button" class="btn-delete">Elimina</button>
             </div>
         </div>
