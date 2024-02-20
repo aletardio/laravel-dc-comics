@@ -29,9 +29,9 @@ class StoreComicRequest extends FormRequest
             'price' => 'required|max:10|min:3',
             'series' => 'required|max:50|min:3',
             'sale_date' => 'required|max:10|min:8',
-            'type' => 'required|max:20',
-            'artists' => 'required',
-            'writers' => 'required',
+            'type' => 'required|max:20|min:8',
+            'artists' => 'required|max:50|min:3',
+            'writers' => 'required|max:50|min:3',
             'description' => 'required',
         ];
     }
@@ -54,12 +54,14 @@ class StoreComicRequest extends FormRequest
             'sale_date.max' => 'La data di uscita deve essere al massimo di 10 caratteri',
             'sale_date.min' => 'La data di uscita deve essere al minimo di 8 caratteri',
             'type.required' => 'La serie è obbligatoria',
+            'type.max' => 'La serie deve essere al massimo 20 caratteri',
+            'type.min' => 'La serie deve essere al minimo 8 caratteri',
             'artists.required' => 'Devi inserire almeno un artista',
             'artists.max' => 'L\'artista deve essere al massimo di 50 caratteri',
             'artists.min' => 'L\'artista deve essere al minimo di 3 caratteri',
             'writers.required' => 'Devi inserire almeno uno scrittore',
-            'writers.max' => 'Lo scrittore deve essere al massimo di 50 caratteri',
-            'writers.min' => 'Lo scrittore deve essere al minimo di 3 caratteri'
+            'writers.max' => 'L\'autore deve essere al massimo di 50 caratteri',
+            'writers.min' => 'L\'autore deve essere al minimo di 3 caratteri'
         ];
     }
 }

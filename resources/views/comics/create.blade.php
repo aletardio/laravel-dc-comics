@@ -17,84 +17,84 @@
                     </div>
                 @endif
                 <div class="text-white mt-4">
-                    <h2 class="text-center">Add a new comic</h2>
+                    <h2 class="text-center">Aggiungi un nuovo fumetto</h2>
                     <form action="{{ route('comics.store') }}" method="post">
                         @csrf
                         <div class="form-group mb-4">
-                            <label for="title">Title</label>
+                            <label for="title">Titolo</label>
                             <input type="text" name="title" id="title"
-                                class="form-control @error('title') is-invalid @enderror"
-                                placeholder="Insert the title of the comic" required value="{{ old('title') }}">
+                                class="form-control @error('title') is-invalid @enderror" placeholder="Inserisci il titolo"
+                                required value="{{ old('title') }}">
                             @error('title')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="thumb">Image</label>
+                            <label for="thumb">Immagine</label>
                             <input type="text" name="thumb" id="thumb"
                                 class="form-control @error('thumb') is-invalid @enderror"
-                                placeholder="Insert the image of the comic" required {{ old('thumb') }}>
+                                placeholder="Inserisci il link dell'immagine" required {{ old('thumb') }}>
                             @error('thumb')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="price">Price</label>
+                            <label for="price">Prezzo</label>
                             <input type="text" name="price" id="price"
-                                class="form-control @error('price') is-invalid @enderror"
-                                placeholder="Insert the price of the comic" required value={{ old('price') }}>
+                                class="form-control @error('price') is-invalid @enderror" placeholder="Inserisci il prezzo"
+                                required value={{ old('price') }}>
                             @error('price')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="series">Series</label>
+                            <label for="series">Serie</label>
                             <input type="text" name="series" id="series"
-                                class="form-control @error('text') is-invalid @enderror"
-                                placeholder="Insert the series of the comic" required {{ old('series') }}>
+                                class="form-control @error('text') is-invalid @enderror" placeholder="Inserisci la serie"
+                                required {{ old('series') }}>
                             @error('series')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="type">Type</label>
+                            <label for="type">Tipo</label>
                             <input type="text" name="type" id="type"
-                                class="form-control @error('type') is-invalid @enderror"
-                                placeholder="Insert the series of the comic" required {{ old('type') }}>
+                                class="form-control @error('type') is-invalid @enderror" placeholder="Inserisci il tipo"
+                                required {{ old('type') }}>
                             @error('type')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="sale_date">Date</label>
+                            <label for="sale_date">Data di uscita</label>
                             <input type="text" name="sale_date" id="sale_date"
                                 class="form-control @error('sale_date') is-invalid @enderror"
-                                placeholder="Insert the date of the comic" required value="{{ old('sale_date') }}">
+                                placeholder="Inserisci la data di uscita" required value="{{ old('sale_date') }}">
                             @error('sale_date')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="artists">Artist</label>
+                            <label for="artists">Artista</label>
                             <input type="text" name="artists" id="artists"
                                 class="form-control @error('artists') is-invalid @enderror"
-                                placeholder="Insert the artist of the comic" required {{ old('artists') }}>
+                                placeholder="Inserisci l'artista" required {{ old('artists') }}>
                             @error('artists')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="writers">Writer</label>
+                            <label for="writers">Autore</label>
                             <input type="text" name="writers" id="writers"
-                                class="form-control @error('writers') is-invalid @enderror"
-                                placeholder="Insert the writer of the comic" required {{ old('writers') }}>
+                                class="form-control @error('writers') is-invalid @enderror" placeholder="Inserisci l'autore"
+                                required {{ old('writers') }}>
                             @error('writers')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group mb-4">
-                            <label for="description">Description</label>
-                            <textarea name="description" id="description" cols="10" rows="20" placeholder="Description"
+                            <label for="description">Descrizione</label>
+                            <textarea name="description" id="description" cols="10" rows="20" placeholder="Descrizione"
                                 class="form-control @error('description') is-invalid @enderror"></textarea>
                             @error('description')
                                 <div class="text-danger">{{ $message }}</div>
