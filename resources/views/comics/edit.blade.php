@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12">
                 @if ($errors->any())
-                    <div class="alert alert-danger">
+                    <div class="alert alert-danger my-4">
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -23,7 +23,8 @@
                         @method('PUT')
                         <div class="form-group mb-4">
                             <label for="title">Title</label>
-                            <input type="text" name="title" id="title" class="form-control"
+                            <input type="text" name="title" id="title"
+                                class="form-control @error('title') is-invalid @enderror"
                                 placeholder="Insert the title of the comic" value="{{ old('title') ?? $comic->title }}"
                                 required>
                             @error('title')
@@ -32,7 +33,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="thumb">Image</label>
-                            <input type="text" name="thumb" id="thumb" class="form-control"
+                            <input type="text" name="thumb" id="thumb"
+                                class="form-control @error('thumb') is-invalid @enderror"
                                 placeholder="Insert the image of the comic" value="{{ old('thumb') ?? $comic->thumb }}"
                                 required>
                             @error('thumb')
@@ -41,7 +43,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="price">Price</label>
-                            <input type="text" name="price" id="price" class="form-control"
+                            <input type="text" name="price" id="price"
+                                class="form-control @error('price') is-invalid @enderror"
                                 placeholder="Insert the price of the comic" value="{{ old('price') ?? $comic->price }}"
                                 required>
                             @error('price')
@@ -50,7 +53,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="series">Series</label>
-                            <input type="text" name="series" id="series" class="form-control"
+                            <input type="text" name="series" id="series"
+                                class="form-control @error('series') is-invalid @enderror"
                                 placeholder="Insert the series of the comic" value="{{ old('series') ?? $comic->series }}"
                                 required>
                             @error('series')
@@ -59,7 +63,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="type">Type</label>
-                            <input type="text" name="type" id="type" class="form-control"
+                            <input type="text" name="type" id="type"
+                                class="form-control @error('type') is-invalid @enderror"
                                 placeholder="Insert the series of the comic" value="{{ old('type') ?? $comic->type }}"
                                 required>
                             @error('type')
@@ -68,7 +73,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="sale_date">Date</label>
-                            <input type="text" name="sale_date" id="sale_date" class="form-control"
+                            <input type="text" name="sale_date" id="sale_date"
+                                class="form-control @error('sale_date') is-invalid @enderror"
                                 placeholder="Insert the date of the comic"
                                 value="{{ old('sale_date') ?? $comic->sale_date }}" required>
                             @error('sale_date')
@@ -77,7 +83,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="artists">Artist</label>
-                            <input type="text" name="artists" id="artists" class="form-control"
+                            <input type="text" name="artists" id="artists"
+                                class="form-control @error('artists') is-invalid @enderror"
                                 placeholder="Insert the artist of the comic"
                                 value="{{ old('artists') ?? $comic->artists }}" required>
                             @error('artists')
@@ -86,7 +93,8 @@
                         </div>
                         <div class="form-group mb-4">
                             <label for="writers">Writer</label>
-                            <input type="text" name="writers" id="writers" class="form-control"
+                            <input type="text" name="writers" id="writers"
+                                class="form-control @error('writers') is-invalid @enderror"
                                 placeholder="Insert the writer of the comic"
                                 value="{{ old('writers') ?? $comic->writers }}" required>
                             @error('writers')
@@ -96,7 +104,7 @@
                         <div class="form-group mb-4">
                             <label for="description">Description</label>
                             <textarea name="description" id="description" cols="10" rows="20" placeholder="Description"
-                                class="form-control">{{ old('description') ?? $comic->description }}"</textarea>
+                                class="form-control @error('description') is-invalid @enderror">{{ old('description') ?? $comic->description }}"</textarea>
                             @error('description')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
