@@ -40,12 +40,27 @@
                     <div class="py-2 lh-base">
                         {{ $comic['description'] }}
                     </div>
-                    <button class="btn-edit">
-                        <i class="fa-solid fa-pencil"></i>
-                        <a class="link-offset-2 link-underline link-underline-opacity-0"
-                            href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit
-                            Comic</a>
-                    </button>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <button class="btn-edit">
+                                <i class="fa-solid fa-pencil"></i>
+                                <a class="link-offset-2 link-underline link-underline-opacity-0"
+                                    href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit
+                                    Comic</a>
+                            </button>
+                        </div>
+                        <div>
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST"
+                                onsubmit="return confirm('Sicuro di voler cancellare questo fumetto?')">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn-delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Delete Comic
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-5 py-4 d-flex flex-column justify-content-center">
                     <div class="text-uppercase text-end fw-bold txt-adv">

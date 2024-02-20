@@ -59,6 +59,7 @@
                         </div>
                         <div class="form-group">
                             <button class="btn-submit" type="submit">
+                                <i class="fa-solid fa-check"></i>
                                 Save
                             </button>
                         </div>
