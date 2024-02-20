@@ -5,7 +5,7 @@
         <img class="jumbotron-image" src="{{ Vite::asset('resources/images/jumbotron.jpg') }}" alt="">
     </div>
     <div>
-        <h5 class="jumbotron-heading">current series</h5>
+        <h5 class="jumbotron-heading">serie attuale</h5>
     </div>
     <div class="boxes cont-comics">
         @foreach ($comics as $comic)
@@ -23,8 +23,8 @@
     <div class="d-flex justify-content-center">
         <button>
             <i class="fa-solid fa-plus"></i>
-            <a class="link-offset-2 link-underline link-underline-opacity-0" href="{{ route('comics.create') }}">Add
-                Comic</a>
+            <a class="link-offset-2 link-underline link-underline-opacity-0" href="{{ route('comics.create') }}">Aggiungi
+                Fumetto</a>
         </button>
     </div>
 @endsection
